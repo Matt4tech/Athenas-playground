@@ -1,0 +1,179 @@
+#Athena's Playground Game
+import random
+import time 
+
+#defining wepons
+tank = random.randint(3,5)
+car = random.randint(2,4)
+people = random.randint(2,7)
+big_bird = random.randint(1,10)
+wepons = ['a tank[1]','a car[2]','squad of soldiers[3]','big bird[4]']
+#defining payers health
+p1_H = 20
+p2_H = 20
+
+#intro
+print ("hello and welcome to Athena\'s Playground.")
+
+#player 1
+time.sleep(1)
+print ("player 1 enter your name")
+player1 = input()
+
+#player 2
+print ("player 2 enter your name")
+player2 = input()
+
+#intro part 2
+time.sleep(2)
+print ("welcome " + player1 + " and " + player2 + "  to Athena\'s Playground. a game where its a war of the players. The goal of the game is to choose the right wepon to combat the opponent choice, The game will end after atleast one players health is at zero")
+time.sleep(5)
+print ("BEGIN!")
+
+#player 1's choice wepons to choose
+time.sleep(2)
+print (player1 + ", choose which wepon you want to deploy first")
+print (wepons)
+P1D1 = input()
+if P1D1 == "1":
+  print ('You choose to deploy a tank')
+  P1D1 = tank
+if P1D1 == "2":
+  print ('You choose to deploy a car')
+  P1D1 = car
+if P1D1 == "3":
+  print ('You choose to deploy a squad of soldiers')
+  P1D1 = people
+if P1D1 == "4":
+  print ('You choose to deploy BIG BIRD!!!!!!')
+  P1D1 =  big_bird
+  
+
+#player 2's choice wepons to choose
+time.sleep(2)
+print (player2 + ", choose which wepon you want to deploy first")
+print (wepons)
+P2D1 = input()
+if P2D1 == "1":
+  print ('You choose to deploy a tank')
+  P2D1 = tank
+if P2D1 == "2":
+  print ('You choose to deploy a car')
+  P2D1 = car
+if P2D1 == "3":
+  print ('You choose to deploy a squad of soldiers')
+  P2D1 = people
+if P2D1 == "4":
+  print ('You choose to deploy BIG BIRD!!!!!!')
+  P2D1 = big_bird
+  
+#Battle 1
+battle1 = P1D1 + P2D1
+
+#battle results
+#if player 1 wins
+time.sleep(2)
+if P1D1 > P2D1:
+  print ('player 1 won this round. Player 2 looses 5 health.')
+  print ("player 1s attack power was" + str(P1D1))
+  print ("player 2s attack power was" + str(P2D1))
+  p2_H = p2_H - 5
+#if player 2 wins
+time.sleep(2)
+if P1D1 < P2D1:
+  print ('player 2 won this round. Player 1 looses 5 health')
+  print ("player 1s attack power was" + str(P1D1))
+  print ("player 2s attack power was" + str(P2D1))
+  p1_H = p1_H - 5
+#if equal
+time.sleep(2)
+if P1D1 == P2D1:
+  print ('It was a tie, both sides lost. Everyone looses 5 heath')
+  print ("player 1s attack power was" + str(P1D1))
+  print ("player 2s attack power was" + str(P2D1))
+  p2_H = p2_H - 5
+  p1_H = p1_H - 5
+  
+
+#Display stats
+time.sleep(1)
+print ('STATS:')
+print ('player ones health is ' + str(p1_H))
+print ('player twos health is ' + str(p2_H))
+
+##########################################
+              #round 2#
+##########################################
+
+while True:
+#player 1's choice wepons to choose
+  time.sleep(3)
+  print (player1 + ", choose which wepon you want to deploy first")
+  print (wepons)
+  P1D1 = input()
+  if P1D1 == "1":
+    print ('You choose to deploy a tank')
+    P1D1 = tank
+  if P1D1 == "2":
+    print ('You choose to deploy a car')
+    P1D1 = car
+  if P1D1 == "3":
+    print ('You choose to deploy a squad of soldiers')
+    P1D1 = people
+  if P1D1 == "4":
+    print ('You choose to deploy BIG BIRD!!!!!!')
+    P1D1 =  big_bird
+  #player 2's choice wepons to choose
+  time.sleep(2)
+  print (player2 + ", choose which wepon you want to deploy first")
+  print (wepons)
+  P2D1 = input()
+  if P2D1 == "1":
+    print ('You choose to deploy a tank')
+    P2D1 = tank
+  if P2D1 == "2":
+    print ('You choose to deploy a car')
+    P2D1 = car
+  if P2D1 == "3":
+    print ('You choose to deploy a squad of soldiers')
+    P2D1 = people
+  if P2D1 == "4":
+    print ('You choose to deploy BIG BIRD!!!!!!')
+    P2D1 = big_bird
+  #Battle 1
+  battle1 = P1D1 + P2D1
+  #battle results
+  #if player 1 wins
+  time.sleep(2)
+  if P1D1 > P2D1:
+    print ('player 1 won this round. Player 2 looses 5 health.')
+    print ("player 1s attack power was " + str(P1D1))
+    print ("player 2s attack power was " + str(P2D1))
+    p2_H = p2_H - 5
+  #if player 2 wins
+  time.sleep(2)
+  if P1D1 < P2D1:
+    print ('player 2 won this round. Player 1 looses 5 health')
+    print ("player 1s attack power was " + str(P1D1))
+    print ("player 2s attack power was " + str(P2D1))
+    p1_H = p1_H - 5
+  #if equal
+  time.sleep(2)
+  if P1D1 == P2D1:
+    print ('It was a tie, both sides lost. Everyone looses 5 heath')
+    print ("player 1s attack power was " + str(P1D1))
+    print ("player 2s attack power was " + str(P2D1))
+    p2_H = p2_H - 5
+    p1_H = p1_H - 5
+  #Display stats
+  time.sleep(1)
+  print ('STATS:')
+  print ('player ones health is ' + str(p1_H))
+  print ('player twos health is ' + str(p2_H))
+  if p1_H <= 0:
+    break
+  if p2_H <= 0:
+    break
+#End Game
+print ("thanks for playing")
+print ("The End'")
